@@ -21,7 +21,7 @@ function searchMeal() {
                         div.className = "col-md-3 h-100"
                         div.innerHTML = `<div id="card-info" class="card" style="width: 18rem;"  onclick="mealDetails(${element.idMeal})"><img src="${element.strMealThumb}"class="card-img-top" alt=""><div class="card-body"><h5 class="card-title text-center">${element.strMeal}</h5></div></div>`;
                     });
-                    document.getElementById('meal-details-section').style.display="none";
+                    document.getElementById('meal-details-section').style.display = "none";
                     document.getElementById('search').appendChild(div);
 
                 } else {
@@ -39,11 +39,11 @@ function searchMeal() {
 
 // Enter button event
 const input = document.getElementById("meal-name");
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-    document.getElementById("search-btn").click();
-  }
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("search-btn").click();
+    }
 });
 
 
@@ -84,8 +84,9 @@ function mealDetails(mealID) {
             .then(response => response.json())
             .then(data => {
                 // document.getElementById('search').style.display="none";
-                document.getElementById('meal-details-section').style.display="block";
-                mealDetailsInfo(data.meals[0])});
+                document.getElementById('meal-details-section').style.display = "block";
+                mealDetailsInfo(data.meals[0])
+            });
 
         // Meal Details info using arrow function
         const mealDetailsInfo = meal => {
