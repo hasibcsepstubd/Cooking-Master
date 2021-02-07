@@ -1,0 +1,16 @@
+body{
+    background-color: #EDD263;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    min-height: 250px;
+    margin-bottom: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: blueviolet;
+}
+
+
